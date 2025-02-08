@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>JS Game</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__conteudo">
+            <div class="container__informacoes">
+                <div class="container__texto">
+                    <h1>Jogo do Número Secreto</h1>
+                    <p class="texto__paragrafo">Escolha um número entre 1 e 10 e tente acertar!</p>
+                </div>
+                
+                <audio id="musicBackground" loop autoplay>
+                    <source src="audio/stranger-things-124008.mp3" type="audio/mp3">
+                    Seu navegador não suporta a tag de áudio.
+                </audio>
+                
+
+                <!-- Input para Nome e Chute -->
+                <input type="text" id="nome" placeholder="Digite seu nome" class="container__input">
+                <input type="number" min="1" max="10" id="chute" class="container__input" placeholder="Chute um número">
+                
+                <!-- Botões -->
+                <div class="chute container__botoes">
+                    <button onclick="verificarChute()" class="container__botao">Chutar</button>
+                    <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao">Novo jogo</button>
+                    <button onclick="mostrarRecordes()" class="container__botao">Recordes</button>
+                </div>
+
+                <!-- Mensagens de Acerto e Proximidade -->
+                <div id="mensagem"></div>
+
+                <!-- Lista de Recordes -->
+                <div class="container__recordes">
+                    <ul id="recordesList"></ul>
+                </div>
+            </div>
+            <img src="./img/ia.png" alt="Uma pessoa olhando para a esquerda" class="container__imagem-pessoa" />
+        </div>
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>

@@ -43,13 +43,13 @@ function reiniciarJogo() {
     tentativas = 0;
     document.getElementById('nome').value = '';
     exibirTextoNaTela('h1', 'Jogo do Número Secreto');
-    exibirTextoNaTela('p', 'Escolha um número de 1 a 10');
+    exibirTextoNaTela('p', 'Escolha um número de 1 a 100');
     document.getElementById('reiniciar').disabled = true;
 }
 
 // Função para gerar um número aleatório
 function gerarNumeroAleatorio() {
-    return parseInt(Math.random() * 10000 + 1);
+    return parseInt(Math.random() * 100 + 1);
 }
 
 // Função para salvar o recorde
